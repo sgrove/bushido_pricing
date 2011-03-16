@@ -40,15 +40,54 @@
 
   <div id="container">
     <header>
-      
+      <h1>Pricing</h1>
     </header>
     
     <div id="main">
-      This is the Bushido HTML5 Starter App - To deploy your own, simple fork <a href="http://github.com/sgrove/bushido_html5_starter_app">this repo</a> and start editing!
+      Current Price: <strong>$<span id="price">55</span></strong>/month (<a href="#">past invoices</a>)
+      <hr />
+      <div id="items">
+        Disk Storage (MB): <input type="range" id="disk-storage" min="100" max="500" step="10" value="100" />  <span id="disk-storage-display">100</span>MB<br />
+        Database Storage (MB): <input type="range" id="db-storage" min="5" max="500" step="10" value="5" /><span id="db-storage-display">5</span>MB<br />
+        Always-on: <input type="checkbox" name="always-on" id="always-on" />
+      </div>
+
+      <div id="addons">
+        Domains ($5/month each):
+        <ul id="domains"></ul>
+        Add a custom domain: <input type="text" name="domain" id="domain-input" />
+      </div>
+
+      <div id="app-services" style="border:2px dotted #333;margin:5px; padding:5px;">
+        <h2>App Services</h2>
+        <h3>These are services charged by the specific app. They can be disabled here, or from within the app's control panel.</h3>
+        <hr />
+        <table style="text-align:left;">
+          <thead>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Recurring?</th>
+            <th>Price</th>
+            <th>Disable</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Locomotive Aloha Editor</td><td>Allows for immediate editing live on the site</td><td>Y</td><td>$30</td><td><a href="#">Disable</a></td>
+            </tr>
+            <tr>
+              <td>Locomotive Real-time Sync</td><td>Edit your site on your local computer and sync the changes to Bushido in real time!</td><td>Y</td><td>$15</td><td><a href="#">Disable</a></td>
+            </tr>
+            <tr>
+              <td>'French Muss' Template</td><td>A wonderful template of a smoking Muss, the perfect compliment for your Locomotive site!</td><td>N</td><td>$30</td><td><a href="#">Disable</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     
     <footer>
-      HTML5 On Bushido: A love story for the ages
+      <br />
+      Bushido Pricing - A Bushido Browser Control Panel Tab
     </footer>
   </div> <!--! end of #container -->
 
@@ -63,6 +102,8 @@
   <!-- scripts concatenated and minified via ant build script-->
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <!-- vendor stuff should be added to above scripts -->
+  <script src="http://cdn.jquerytools.org/1.2.5/jquery.tools.min.js"></script>
   <!-- end concatenated and minified scripts-->
   
   
